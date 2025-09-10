@@ -10,7 +10,7 @@ class WebhookWhatsapp extends Controller
     public function webhook(Request $request){
         $dados = $request->all();
         if($dados?->isGroup == true){
-            return jso
+            return response()->json(['status' => 'ok']);//ignora mensagens de grupo
         }
     }
 }
